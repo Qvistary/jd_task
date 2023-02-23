@@ -12,7 +12,7 @@ by:小手冰凉 tg:@chianPLA
  */
 
 const $ = new Env('京东签到领现金微信端');
-const notify = $.isNode() ? require('./utils/sendNotify') : '';
+const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./utils/jdCookie.js') : '';
 //IOS等用户直接用NobyDa的jd cookie
