@@ -10,7 +10,7 @@
  */
 const $ = new Env("东东健康社区");
 const jdCookieNode = $.isNode() ? require("./utils/jdCookie.js") : "";
-const notify = $.isNode() ? require('./utils/sendNotify') : "";
+const notify = $.isNode() ? require('./sendNotify') : "";
 let cookiesArr = [], cookie = "", allMessage = "", message;
 let reward = process.env.JD_HEALTH_REWARD_NAME ? process.env.JD_HEALTH_REWARD_NAME : ''
 function oc(fn, defaultVal) {//optioanl chaining

@@ -48,7 +48,7 @@ let num;
             $.index = i + 1;
             $.isLogin = true;
             $.nickName = '';
-            $.UA = require('./USER_AGENTS').UARAM();
+            $.UA = require('./utils/USER_AGENTS').UARAM();
             await TotalBean();
             console.log(`开始【京东账号${$.index}】${$.nickName || $.UserName}\n`);
             if (!$.isLogin) {
@@ -598,7 +598,7 @@ async function plantBeanIndex() {
 function requireConfig() {
     return new Promise(resolve => {
         console.log('开始获取种豆得豆配置文件\n')
-        notify = $.isNode() ? require('./utils/sendNotify') : '';
+        notify = $.isNode() ? require('./sendNotify') : '';
         //Node.js用户请在jdCookie.js处填写京东ck;
         const jdCookieNode = $.isNode() ? require('./utils/jdCookie.js') : '';
         //IOS等用户直接用NobyDa的jd cookie

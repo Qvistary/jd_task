@@ -5,7 +5,7 @@ cron "25 2,14 * * *" script-path=https://raw.githubusercontent.com/Aaron-lv/sync
 */
 
 const $ = new Env('领京豆额外奖励');
-const notify = $.isNode() ? require('./utils/sendNotify') : '';
+const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./utils/jdCookie.js') : '';
 //IOS等用户直接用NobyDa的jd cookie
